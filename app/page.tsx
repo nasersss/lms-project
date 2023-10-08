@@ -1,5 +1,10 @@
-import Image from "next/image";
+import { Button } from "@/components/ui/button";
 
 export default function Home() {
-  return <p className="text-3xl font-medium text-sky-700">LMS Project </p>;
+  return (
+    <div>
+      <p className="text-3xl font-medium text-sky-700">LMS Project </p>
+      <Button variant={"sky"}>Click</Button>
+    </div>
+  );
 }
