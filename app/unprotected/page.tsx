@@ -1,5 +1,5 @@
 const Test = () => {
-  return <div>unprotected route</div>;
-};
+  return <div>unprotected route</div>
+}
 
-export default Test;
+export default Test
