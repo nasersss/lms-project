@@ -1,0 +1,11 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+# npx lint-staged
+echo 'Start check format'
+yarn prettier
+
+echo 'Start lint command'
+yarn lint
+
+echo 'Every thing is OK'
