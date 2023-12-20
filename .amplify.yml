@@ -3,14 +3,10 @@ frontend:
   phases:
     preBuild:
       commands:
-        - yarn install
+        - npm ci
     build:
       commands:
-        # This env command will take the clientID, redirectURL, and client
-        # secret and then add it to the runtime variables. More info on AWS docs
-        # https://docs.aws.amazon.com/amplify/latest/userguide/ssr-environment-variables.html
-        # - env | grep -e clientID -e redirectURL -e clientSecret >> .env.production
-        - yarn run build
+        - npm run build
   artifacts:
     baseDirectory: .next
     files:
