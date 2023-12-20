@@ -20,30 +20,6 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en">
-        <head>
-          <Script
-            strategy="lazyOnload"
-            src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GOOGLE_ANALYTICS}`}
-          />
-
-          <Script
-            id="ga-script"
-            strategy="lazyOnload"
-          >
-            {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', '${process.env.GOOGLE_ANALYTICS}', {
-              page_path: window.location.pathname,
-            });
-        `}
-          </Script>
-          <Script id="microsoft-clarity">
-            {` (function(c,l,a,r,i,t,y){ c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)}; t=l.createElement(r);t.async=1;t.src="clarity.ms/tag/"+i; y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y); })(window, document, "clarity", "script", "k8s3auc408"); `}{' '}
-          </Script>
-        </head>
-
         <body className={inter.className}>
           <ToastProvider />
           {children}
